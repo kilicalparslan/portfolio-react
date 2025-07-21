@@ -15,17 +15,20 @@ const navItems = [
 
 const baseClass =
   "rounded-md cursor-pointer font-poppins font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out";
-const activeClass = "text-white bg-gradient-to-r from-[#FA5252] to-[#DD2476]";
+
+const activeClass = "text-white bg-primary";
+
 const inactiveClass =
-  "bg-white text-gray-lite dark:bg-[#212425] dark:text-[#A6A6A6] hover:text-white hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]";
+  "bg-background text-foreground hover:text-white hover:bg-primary";
 
 export default function Navbar() {
   return (
-    <header className="flex justify-between items-center fixed top-0 left-0 w-full lg:static z-[1111111111]">
-      <div className="flex justify-between w-full px-4 lg:px-0 bg-[#F3F6F6] lg:bg-transparent lg:dark:bg-transparent dark:bg-black">
-        <div className="flex justify-between w-full items-center space-x-4 lg:my-8 my-5"></div>
+    <header className="flex items-center top-0 left-0 w-full lg:static z-[1111111111] px-4 lg:px-0 dark:bg-background">
+      <div className="flex-shrink-0">
+        <img className="h-[26px] lg:h-[32px]" src="/vite.svg" alt="Logo" />
       </div>
-      <nav className="hidden lg:block">
+
+      <nav className="flex-1 flex justify-center py-6">
         <ul className="flex my-12">
           {navItems.map(({ to, label, icon }) => (
             <li key={to}>

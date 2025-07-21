@@ -6,7 +6,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-white dark:bg-black transition-colors">
-        <Navbar />
+        <div className="z-50">
+          <div className="container"></div>
+          <Navbar />
+        </div>
         <AppRouter />
       </div>
     </BrowserRouter>
