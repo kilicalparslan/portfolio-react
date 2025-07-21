@@ -22,7 +22,6 @@
   --white: #ffffff;
 }
 
-/* Tailwind ile uyumlu hale getirmek için basit sınıflar */
 .bg-primary {
   background: linear-gradient(
     to right,

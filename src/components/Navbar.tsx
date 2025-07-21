@@ -24,10 +24,6 @@ const inactiveClass =
 export default function Navbar() {
   return (
     <header className="flex items-center top-0 left-0 w-full lg:static z-[1111111111] px-4 lg:px-0 dark:bg-background">
-      <div className="flex-shrink-0">
-        <img className="h-[26px] lg:h-[32px]" src="/vite.svg" alt="Logo" />
-      </div>
-
       <nav className="flex-1 flex justify-center py-6">
         <ul className="flex my-12">
           {navItems.map(({ to, label, icon }) => (
