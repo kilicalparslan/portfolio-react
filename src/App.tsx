@@ -1,11 +1,15 @@
-import MainLayout from "./layout/MainLayout";
-import Home from "./pages/home";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <MainLayout>
-      <Home />
-    </MainLayout>
+    <BrowserRouter>
+      <div className="min-h-screen bg-white dark:bg-black transition-colors">
+        <Navbar />
+        <AppRouter />
+      </div>
+    </BrowserRouter>
   );
 }
 
