@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --primary: #fa5252;
   --primary-gradient-from: #fa5252;
@@ -44,4 +46,28 @@
 
 .text-white {
   color: var(--white);
+}
+
+.resume-btn {
+  @apply px-5 py-2 rounded-md cursor-default transition-colors;
+  background-color: rgb(237 242 242 / var(--tw-bg-opacity));
+  color: rgb(68 86 108 / var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.dark .resume-btn {
+  background-color: rgba(28, 28, 28, var(--tw-bg-opacity)); /* veya #1C1C1C */
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+.after-effect {
+  --tw-gradient-from: #fa5252;
+  --tw-gradient-to: rgba(250, 82, 82, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #dd2476;
+  display: inline-block;
+  font-family: Roboto Slab, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
 }
