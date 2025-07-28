@@ -50,24 +50,53 @@
 
 .resume-btn {
   @apply px-5 py-2 rounded-md cursor-default transition-colors;
-  background-color: rgb(237 242 242 / var(--tw-bg-opacity));
-  color: rgb(68 86 108 / var(--tw-text-opacity));
-  --tw-bg-opacity: 1;
-  --tw-text-opacity: 1;
+  background-color: rgb(237 242 242 / var(--bg-opacity));
+  color: rgb(68 86 108 / var(--text-opacity));
+  --bg-opacity: 1;
+  --text-opacity: 1;
 }
 
 .dark .resume-btn {
-  background-color: rgba(28, 28, 28, var(--tw-bg-opacity)); /* veya #1C1C1C */
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  background-color: rgba(28, 28, 28, var(--bg-opacity)); /* veya #1C1C1C */
+  color: rgba(255, 255, 255, var(--text-opacity));
 }
 .after-effect {
-  --tw-gradient-from: #fa5252;
-  --tw-gradient-to: rgba(250, 82, 82, 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #dd2476;
+  --gradient-from: #fa5252;
+  --gradient-to: rgba(250, 82, 82, 0);
+  --gradient-stops: var(--gradient-from), var(--gradient-to);
+  --gradient-to: #dd2476;
   display: inline-block;
   font-family: Roboto Slab, serif;
   font-size: 2.5rem;
   font-weight: 700;
   position: relative;
+}
+
+.shadow-icon {
+  --shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.08);
+  --shadow-colored: 0 4px 6px 0px var(--shadow-color);
+}
+.shadow-icon,
+.shadow-md {
+  box-shadow: 0 0 #0000, 0 0 #0000, var(--shadow);
+  box-shadow: var(--ring-offset-shadow, 0 0 #0000),
+    var(--ring-shadow, 0 0 #0000), var(--shadow);
+}
+
+.dark .dark\:bg-color-990 {
+  --bg-opacity: 1;
+  background-color: rgb(33 36 37 / var(--bg-opacity));
+}
+
+.about-box {
+  --border-opacity: 1;
+  border-color: rgb(33 36 37 / var(--border-opacity));
+  border-radius: 0.75rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.dark .about-box {
+  border-width: 2px;
 }
