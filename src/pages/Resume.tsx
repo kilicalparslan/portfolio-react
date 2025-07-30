@@ -219,21 +219,6 @@ function Resume() {
             </div>
           </div>
         </div>
-
-        <footer className="overflow-hidden rounded-b-2xl bg-transparent">
-          <p className="text-center py-6 text-gray-lite dark:text-color-910 ">
-            © 2025 All Rights Reserved by{" "}
-            <a
-              className="hover:text-[#FA5252] duration-300 transition"
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              template
-            </a>
-            .
-          </p>
-        </footer>
       </div>
     </section>
   );
